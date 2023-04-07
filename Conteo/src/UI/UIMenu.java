@@ -2,6 +2,8 @@ package UI;
 
 import java.util.Scanner;
 
+import static Programs.FirstTotalCharacterCountOfAPlainTextFile.firstTotalCharacterCountOfAPlainTextFile;
+
 public class UIMenu {
     public static void showMenu() {
         System.out.println("Welcome to our homework");
@@ -21,7 +23,7 @@ public class UIMenu {
                 case 1:
                     System.out.println("You select Total Character count");
                     response = 0;
-                    // Aquí se va a llamar a la clase de la primer tarea o programa
+                    firstTotalCharacterCountOfAPlainTextFile("D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt");
                     break;
                 case 2:
                     System.out.println("You select Count of each of the different characters contained in a plain text file");
