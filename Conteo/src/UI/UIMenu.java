@@ -2,6 +2,7 @@ package UI;
 
 import java.util.Scanner;
 
+import static Programs.CountOfEachOfTheDirefferentCharactersContained.countOfEachOfTheDirefferentCharactersContained;
 import static Programs.FirstTotalCharacterCountOfAPlainTextFile.firstTotalCharacterCountOfAPlainTextFile;
 
 public class UIMenu {
@@ -23,12 +24,12 @@ public class UIMenu {
                 case 1:
                     System.out.println("You select Total Character count");
                     response = 0;
-                    firstTotalCharacterCountOfAPlainTextFile("D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt");
+                    firstTotalCharacterCountOfAPlainTextFile("D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt"); //Here you must put the directory of your txt file
                     break;
                 case 2:
                     System.out.println("You select Count of each of the different characters contained in a plain text file");
                     response = 0;
-                    // Aquí se va a llamar a la clase de la segunda tarea o programa
+                    countOfEachOfTheDirefferentCharactersContained("D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt"); //Here you must put the directory of your txt file
                     break;
                 case 3:
                     System.out.println("You select word counter");
@@ -49,5 +50,6 @@ public class UIMenu {
             }
 
         } while (response != 0);
+        System.out.println("Bye");
     }
 }
