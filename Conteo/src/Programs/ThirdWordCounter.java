@@ -35,10 +35,6 @@ public class ThirdWordCounter {
                     counter = counter + 1;
                 }
             }
-            System.out.println("Iteracion numero " + i);
-            System.out.println(counter);
-            System.out.println(temp);
-            System.out.println(response);
         }
 
         System.out.println("The total number of words is: " + counter);

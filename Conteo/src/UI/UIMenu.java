@@ -1,17 +1,19 @@
 package UI;
 
+import java.io.IOException;
 import java.util.Scanner;
 
+import static Programs.FourthLineCounter.lineCounter;
 import static Programs.SecondCountOfEachOfTheDirefferentCharactersContained.countOfEachOfTheDirefferentCharactersContained;
 import static Programs.FirstTotalCharacterCountOfAPlainTextFile.firstTotalCharacterCountOfAPlainTextFile;
 import static Programs.ThirdWordCounter.wordCounter;
 
 public class UIMenu {
-    public static void showMenu() {
+    public static void showMenu() throws IOException {
         System.out.println("Welcome to our homework");
         System.out.println("Please select the correct option:");
 
-        String urlTxtFile = "D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt";
+        String urlTxtFile = "D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt"; //Here you must put the directory of your txt file
 
         int response = 0;
         do {
@@ -27,12 +29,12 @@ public class UIMenu {
                 case 1:
                     System.out.println("You select Total Character count");
                     response = 0;
-                    firstTotalCharacterCountOfAPlainTextFile(urlTxtFile); //Here you must put the directory of your txt file
+                    firstTotalCharacterCountOfAPlainTextFile(urlTxtFile);
                     break;
                 case 2:
                     System.out.println("You select Count of each of the different characters contained in a plain text file");
                     response = 0;
-                    countOfEachOfTheDirefferentCharactersContained(urlTxtFile); //Here you must put the directory of your txt file
+                    countOfEachOfTheDirefferentCharactersContained(urlTxtFile);
                     break;
                 case 3:
                     System.out.println("You select word counter");
@@ -42,7 +44,7 @@ public class UIMenu {
                 case 4:
                     System.out.println("You select Line Counter");
                     response = 0;
-                    //Aquí se va a llamar a la clase de la cuarta tarea o programa
+                    lineCounter(urlTxtFile);
                     break;
                 case 0:
                     System.out.println("See you! :)");
