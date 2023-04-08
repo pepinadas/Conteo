@@ -4,7 +4,7 @@ import textReader.TextReader;
 
 import java.util.HashMap;
 
-public class CountOfEachOfTheDirefferentCharactersContained {
+public class SecondCountOfEachOfTheDirefferentCharactersContained {
 
     public static void countOfEachOfTheDirefferentCharactersContained(String file) {
         TextReader textReader = new TextReader();
