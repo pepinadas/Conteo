@@ -24,7 +24,7 @@ public class FourthLineCounter {
         int counter = 1;
 
         if (changeLine.equals("No")) {
-            //Here the app is asking for the line changer
+            //Here the app is asking for the line changer, if the line changer is different to enter then the logic is similar as the third program
 
             System.out.println("Please specify which is the line changer: "); //This text will be seen by the app user
             do {
@@ -35,32 +35,32 @@ public class FourthLineCounter {
                 }
             } while (response.length() != 1 ); //If the line changer is too big, then the user will bring to the app another character
 
-            char[] chars = word.toCharArray();
+            char[] chars = word.toCharArray(); //At this part we assign the File string result to a char
 
 
-            int wordLenght = word.length();
+            int wordLenght = word.length(); //Here we assign the extension of the File String result to a variable named "wordLenght"
 
-            for (int i = 1; i != wordLenght; i++) {
-                String temp = String.valueOf(chars[i]);
+            for (int i = 1; i != wordLenght; i++) { //Here we evaluate if the i is not equals to the length of the File String
+                String temp = String.valueOf(chars[i]); //We create a temporary variable and assign it the string of the iteration of char
 
-                if (chars[i] != chars[i-1] ) {
-                    if (response.equals(temp)){
-                        counter = counter + 1;
+                if (chars[i] != chars[i-1] ) { //If the iteration of char is not equals to itself but in the past position (to prevent count more paragraphs than the really exists) then...
+                    if (response.equals(temp)){  //and only if response equals to the temporary variable than we created previously
+                        counter = counter + 1; //Counter = counter + 1
                     }
                 }
             }
-        } else if (changeLine.equals("Yes")) {
-            BufferedReader br = new BufferedReader(new FileReader(file));
+        } else if (changeLine.equals("Yes")) { //If the line changer is entered then...
+            BufferedReader br = new BufferedReader(new FileReader(file)); //we use a similar logic than the TextReader Class, creating a new instance of the class BufferedReader, and named it like br (Because in the E team we love bad bunny brr)
 
-            while ( br.readLine() != null ) {
-                counter = counter + 1;
+            while ( br.readLine() != null ) { //When br.readLine is not null then the line changes so...
+                counter = counter + 1; //counter = counter + 1
             }
         }
 
 
 
 
-        System.out.println("The total number of lines in the file is: " + (counter - 1));
+        System.out.println("The total number of lines in the file is: " + (counter - 1)); //At the end we show in console the total number of lines in the file with the variable Counter (-1)
 
 
 
