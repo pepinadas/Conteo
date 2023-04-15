@@ -9,15 +9,8 @@ import static Programs.FirstTotalCharacterCountOfAPlainTextFile.firstTotalCharac
 import static Programs.ThirdWordCounter.wordCounter;
 
 public class UIMenu {
-    public static void showMenu() throws IOException {
-        System.out.println("Welcome to our homework");
+    public static void showMenu(String urlTxtFile) throws IOException {
 
-        System.out.println("Enter the url of the file");
-
-        String urlTxtFile = "D:\\Usuarios\\Personal\\Escritorio\\programacion\\Tarea\\Compiladores\\Conteo\\Conteo\\src\\Conteo.txt";
-
-        Scanner url = new Scanner(System.in);
-        urlTxtFile = String.valueOf(url.nextLine()); //Here you must put the directory of your txt file by console
 
         System.out.println("Please select the correct option:");
         int response = 0;
@@ -39,21 +32,25 @@ public class UIMenu {
                     System.out.println("You select Total Character count");
                     response = 0; //Here the app change the response to 0 to allow us exit the Do While
                     firstTotalCharacterCountOfAPlainTextFile(urlTxtFile); //Here the static class selected is called
+                    showMenu(urlTxtFile); //Here the class is called again to "restart" the program
                     break;
                 case 2:
                     System.out.println("You select Count of each of the different characters contained in a plain text file");
                     response = 0; //Here the app change the response to 0 to allow us exit the Do While
                     countOfEachOfTheDirefferentCharactersContained(urlTxtFile); //Here the static class selected is called
+                    showMenu(urlTxtFile); //Here the class is called again to "restart" the program
                     break;
                 case 3:
                     System.out.println("You select word counter");
                     response = 0; //Here the app change the response to 0 to allow us exit the Do While
                     wordCounter(urlTxtFile); //Here the static class selected is called
+                    showMenu(urlTxtFile); //Here the class is called again to "restart" the program
                     break;
                 case 4:
                     System.out.println("You select Line Counter");
                     response = 0; //Here the app change the response to 0 to allow us exit the Do While
                     lineCounter(urlTxtFile); //Here the static class selected is called
+                    showMenu(urlTxtFile); //Here the class is called again to "restart" the program
                     break;
                 case 0:
                     System.out.println("See you! :)"); //A nice farewell message
@@ -64,6 +61,5 @@ public class UIMenu {
             }
 
         } while (response != 0); // When the program finish its journey, the response changes to 0
-        System.out.println("Bye"); //Some nice farewell message part 2
     }
 }

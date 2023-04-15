@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Conteo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Conteo_jar</output-path>
+    <root id="archive" name="Conteo.jar">
+      <element id="module-output" name="Conteo" />
+    </root>
+  </artifact>
+</component>

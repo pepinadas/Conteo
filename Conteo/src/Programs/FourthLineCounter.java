@@ -8,6 +8,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static UI.UIMenu.showMenu;
+
 public class FourthLineCounter {
     public static void lineCounter(String file) throws IOException {
         TextReader textReader = new TextReader();
@@ -59,10 +61,7 @@ public class FourthLineCounter {
 
 
 
-
         System.out.println("The total number of lines in the file is: " + (counter - 1)); //At the end we show in console the total number of lines in the file with the variable Counter (-1)
-
-
 
     }
 }
